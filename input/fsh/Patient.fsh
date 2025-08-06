@@ -58,6 +58,6 @@ Description: "SZMC Patient profile based on the ILCore Patient profile"
 
 * identifier[baby] ^short = "Baby Patient Identifier"
 * identifier[baby] ^definition = "Baby patient identifier used for newborns before official registration"
-* identifier[baby].system = "http://www.szmc.org.il/identifier/baby-patient" (exactly)
+* identifier[baby].system = "http://fhir.szmc.org.il/identifier/baby-patient" (exactly)
 * identifier[baby].value 1..1
 * identifier[baby].value ^short = "Baby patient ID value"
