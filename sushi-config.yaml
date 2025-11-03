@@ -27,10 +27,10 @@ publisher:
 dependencies:
   il.core.fhir.r4: 
     uri: http://fhir.health.gov.il/ImplementationGuide/il.core.fhir.r4
-    version: 0.18.0
-  # il.hdp.fhir.r4:
-  #   uri: http://hdp.fhir.health.gov.il/ImplementationGuide/il.core.fhir.r4
-  #   version: 0.2.0
+    version: 0.18.3
+  il.hdp.fhir.r4:
+    uri: http://hdp.fhir.health.gov.il/ImplementationGuide/il.core.fhir.r4
+    version: 0.2.3
 
 
 #
