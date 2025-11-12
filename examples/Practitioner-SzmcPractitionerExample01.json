@@ -1,0 +1,147 @@
+{
+  "resourceType": "Practitioner",
+  "id": "SzmcPractitionerExample01",
+  "meta": {
+    "profile": [
+      "http://fhir.szmc.org.il/StructureDefinition/szmc-practitioner"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://fhir.szmc.org.il/identifier/enc-id",
+      "value": "ENC123456789"
+    },
+    {
+      "system": "http://fhir.health.gov.il/identifier/il-national-id",
+      "value": "000000018",
+      "assigner": {
+        "reference": "Organization/SzmcMainHospital"
+      }
+    },
+    {
+      "system": "http://practitioners.health.gov.il/Practitioners",
+      "value": "1-12345"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "EI",
+            "display": "Employee number"
+          }
+        ]
+      },
+      "period": {
+        "start": "2010-01-15"
+      },
+      "use": "official",
+      "system": "http://fhir.szmc.org.il/identifier/mispar_oved",
+      "value": "E12345"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "CAAI",
+            "display": "Consumer Application Account Identifier"
+          }
+        ]
+      },
+      "system": "http://fhir.szmc.org.il/identifier/user_skey",
+      "value": "USER987654"
+    }
+  ],
+  "name": [
+    {
+      "given": [
+        "יוסף",
+        "דוד"
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/language",
+          "valueCode": "he"
+        }
+      ],
+      "use": "official",
+      "family": "לוי"
+    }
+  ],
+  "qualification": [
+    {
+      "identifier": [
+        {
+          "system": "http://practitioners.health.gov.il/Practitioners",
+          "value": "1-12345"
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://fhir.health.gov.il/StructureDefinition/ext-qualification-practice",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "1",
+                "system": "http://fhir.health.gov.il/cs/practitioner-profession-moh",
+                "display": "רפואה"
+              }
+            ]
+          }
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "code": "2",
+            "system": "http://fhir.health.gov.il/cs/practitioner-certificate-type-moh"
+          }
+        ]
+      },
+      "issuer": {
+        "reference": "Organization/SzmcMainHospital"
+      }
+    },
+    {
+      "identifier": [
+        {
+          "system": "http://fhir.health.gov.il/identifier/practitioner-expertise",
+          "value": "12345"
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://fhir.health.gov.il/StructureDefinition/ext-qualification-practice",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "1",
+                "system": "http://fhir.health.gov.il/cs/practitioner-expertise-moh",
+                "display": "רפואה פנימית"
+              }
+            ]
+          }
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "code": "5",
+            "system": "http://fhir.health.gov.il/cs/practitioner-certificate-type-moh"
+          }
+        ]
+      }
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "רחוב הרצל 45"
+      ],
+      "city": "תל אביב",
+      "postalCode": "6801001",
+      "country": "IL"
+    }
+  ]
+}

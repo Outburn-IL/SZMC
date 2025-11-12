@@ -1,0 +1,148 @@
+{
+  "resourceType": "Patient",
+  "id": "SzmcPatientExample01",
+  "meta": {
+    "profile": [
+      "http://fhir.szmc.org.il/StructureDefinition/szmc-patient"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://fhir.health.gov.il/identifier/il-national-id",
+      "value": "000000018",
+      "assigner": {
+        "reference": "Organization/SzmcMainHospital"
+      }
+    }
+  ],
+  "extension": [
+    {
+      "url": "http://fhir.health.gov.il/StructureDefinition/ext-il-hmo",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "101",
+            "system": "http://fhir.health.gov.il/cs/paying-entity-moh",
+            "display": "קופת חולים כללית"
+          }
+        ]
+      }
+    },
+    {
+      "extension": [
+        {
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://fhir.szmc.org.il/cs/citizenship",
+                "code": "IL",
+                "display": "Israeli"
+              }
+            ]
+          },
+          "url": "code"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/patient-citizenship"
+    },
+    {
+      "extension": [
+        {
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://fhir.szmc.org.il/cs/nationality",
+                "code": "IL",
+                "display": "ישראלי"
+              }
+            ]
+          },
+          "url": "code"
+        }
+      ],
+      "url": "http://hl7.org/fhir/StructureDefinition/patient-nationality"
+    },
+    {
+      "valueAddress": {
+        "country": "IL"
+      },
+      "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
+    }
+  ],
+  "name": [
+    {
+      "given": [
+        "דוד",
+        "משה"
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/language",
+          "valueCode": "he"
+        }
+      ],
+      "use": "official",
+      "family": "כהן"
+    },
+    {
+      "given": [
+        "David",
+        "Moshe"
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/language",
+          "valueCode": "en"
+        }
+      ],
+      "use": "official",
+      "family": "Cohen"
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "052-5551234",
+      "use": "mobile"
+    },
+    {
+      "system": "email",
+      "value": "david.cohen@example.com",
+      "use": "home"
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "רחוב הרצל 123"
+      ],
+      "use": "home",
+      "city": "תל אביב",
+      "postalCode": "6801234",
+      "country": "IL"
+    }
+  ],
+  "communication": [
+    {
+      "language": {
+        "coding": [
+          {
+            "code": "he",
+            "system": "urn:ietf:bcp:47"
+          }
+        ]
+      },
+      "preferred": true
+    }
+  ],
+  "generalPractitioner": [
+    {
+      "reference": "Organization/SzmcInternalMedicineDept"
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1980-05-15",
+  "managingOrganization": {
+    "reference": "Organization/SzmcMainHospital"
+  }
+}

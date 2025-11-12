@@ -1,0 +1,50 @@
+{
+  "resourceType": "Organization",
+  "id": "SzmcInternalMedicineDept",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "organization",
+        "display": "יחידה ארגונית"
+      }
+    ],
+    "profile": [
+      "http://fhir.szmc.org.il/StructureDefinition/szmc-organization"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://fhir.health.gov.il/identifier/moh-hospital-department",
+      "value": "12345-10000"
+    }
+  ],
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://fhir.health.gov.il/cs/department-type-moh",
+          "code": "10000",
+          "display": "אשפוז - פנימית"
+        },
+        {
+          "system": "http://fhir.szmc.org.il/cs/dept-id",
+          "code": "101",
+          "display": "מחלקה פנימית א'"
+        }
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "03-5302500",
+      "use": "work"
+    }
+  ],
+  "active": true,
+  "name": "מחלקה פנימית א'",
+  "partOf": {
+    "reference": "Organization/SzmcMainHospital"
+  }
+}

@@ -15,11 +15,11 @@ Description: "SZMC PractitionerRole profile based on the ILCore PractitionerRole
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
 
-* identifier contains emp-role 1..1 and enc-id 0..*
+* identifier contains emp-role 1..1
 * identifier[emp-role].system 1..1
 * identifier[emp-role].system = "http://fhir.szmc.org.il/identifier/employee-role" (exactly)
 * identifier[emp-role].value 1..1
-* identifier[enc-id].system 1..1
+
 * practitioner.identifier.system = "http://fhir.szmc.org.il/identifier/enc-id" (exactly)
 
 * code.coding ^slicing.discriminator.type = #value

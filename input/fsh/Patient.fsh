@@ -7,19 +7,19 @@ Description: "SZMC Patient profile based on the ILCore Patient profile"
 // Modify existing HMO extension cardinality and add constraints
 * extension[hmo] 1..1
 
-* extension[hmo].valueCodeableConcept.coding ^slicing.discriminator[0].type = #value
-* extension[hmo].valueCodeableConcept.coding ^slicing.discriminator[0].path = "system"
-* extension[hmo].valueCodeableConcept.coding ^slicing.rules = #open
-* extension[hmo].valueCodeableConcept.coding contains moh 0..*
+// * extension[hmo].valueCodeableConcept.coding ^slicing.discriminator[0].type = #value
+// * extension[hmo].valueCodeableConcept.coding ^slicing.discriminator[0].path = "system"
+// * extension[hmo].valueCodeableConcept.coding ^slicing.rules = #open
+// * extension[hmo].valueCodeableConcept.coding contains moh 0..*
 
-* extension[hmo].valueCodeableConcept.coding[moh].system.extension 0..1
-* extension[hmo].valueCodeableConcept.coding[moh].system.extension.url 1..1
-* extension[hmo].valueCodeableConcept.coding[moh].system.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason" (exactly)
-* extension[hmo].valueCodeableConcept.coding[moh].system.extension.valueCoding 0..1
-* extension[hmo].valueCodeableConcept.coding[moh].system.extension.valueCoding.system 1..1
-* extension[hmo].valueCodeableConcept.coding[moh].system.extension.valueCoding.system = "http://terminology.hl7.org/CodeSystem/data-absent-reason" (exactly)
-* extension[hmo].valueCodeableConcept.coding[moh].system.extension.valueCoding.code 1..1
-* extension[hmo].valueCodeableConcept.coding[moh].system.extension.valueCoding.code = #unknown (exactly)
+// * extension[hmo].valueCodeableConcept.coding[moh].system.extension 0..1
+// * extension[hmo].valueCodeableConcept.coding[moh].system.extension.url 1..1
+// * extension[hmo].valueCodeableConcept.coding[moh].system.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason" (exactly)
+// * extension[hmo].valueCodeableConcept.coding[moh].system.extension.valueCoding 0..1
+// * extension[hmo].valueCodeableConcept.coding[moh].system.extension.valueCoding.system 1..1
+// * extension[hmo].valueCodeableConcept.coding[moh].system.extension.valueCoding.system = "http://terminology.hl7.org/CodeSystem/data-absent-reason" (exactly)
+// * extension[hmo].valueCodeableConcept.coding[moh].system.extension.valueCoding.code 1..1
+// * extension[hmo].valueCodeableConcept.coding[moh].system.extension.valueCoding.code = #unknown (exactly)
 
 * extension contains
     $patient-citizenship named citizenship 0..1 and

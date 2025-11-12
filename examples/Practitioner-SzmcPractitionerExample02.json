@@ -1,0 +1,83 @@
+{
+  "resourceType": "Practitioner",
+  "id": "SzmcPractitionerExample02",
+  "meta": {
+    "profile": [
+      "http://fhir.szmc.org.il/StructureDefinition/szmc-practitioner"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://fhir.szmc.org.il/identifier/enc-id",
+      "value": "ENC987654321"
+    },
+    {
+      "system": "http://practitioners.health.gov.il/Nurses",
+      "value": "54321"
+    },
+    {
+      "system": "http://fhir.szmc.org.il/identifier/temp-practitioner",
+      "value": "TMP-NURSE-2025-001"
+    }
+  ],
+  "name": [
+    {
+      "given": [
+        "רחל"
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/language",
+          "valueCode": "he"
+        }
+      ],
+      "use": "official",
+      "family": "שרון"
+    }
+  ],
+  "qualification": [
+    {
+      "identifier": [
+        {
+          "system": "http://practitioners.health.gov.il/Nurses",
+          "value": "54321"
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://fhir.health.gov.il/StructureDefinition/ext-qualification-practice",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "102",
+                "system": "http://fhir.health.gov.il/cs/practitioner-profession-moh",
+                "display": "אח/ות מעשי/ת"
+              }
+            ]
+          }
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "code": "102",
+            "system": "http://fhir.health.gov.il/cs/practitioner-certificate-type-moh"
+          }
+        ]
+      },
+      "issuer": {
+        "reference": "Organization/SzmcMainHospital"
+      }
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "רחוב דיזנגוף 100"
+      ],
+      "city": "תל אביב",
+      "postalCode": "6433109",
+      "country": "IL"
+    }
+  ]
+}

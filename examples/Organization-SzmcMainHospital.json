@@ -1,0 +1,66 @@
+{
+  "resourceType": "Organization",
+  "id": "SzmcMainHospital",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "organization",
+        "display": "יחידה ארגונית"
+      }
+    ],
+    "profile": [
+      "http://fhir.szmc.org.il/StructureDefinition/szmc-organization"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://institutions.health.gov.il/Institutions",
+      "value": "12345"
+    },
+    {
+      "system": "http://fhir.health.gov.il/identifier/legal-entity",
+      "value": "520012345"
+    }
+  ],
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://fhir.health.gov.il/cs/institution-type-moh",
+          "code": "1",
+          "display": "אשפוז כללי"
+        },
+        {
+          "system": "http://fhir.szmc.org.il/cs/dept-id",
+          "code": "001",
+          "display": "מנהל"
+        }
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "03-5303030",
+      "use": "work"
+    },
+    {
+      "system": "email",
+      "value": "info@sheba.health.gov.il",
+      "use": "work"
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "דרך שבע 2"
+      ],
+      "city": "רמת גן",
+      "postalCode": "5262000",
+      "country": "IL"
+    }
+  ],
+  "active": true,
+  "name": "מרכז רפואי שיבא ע\"ש תל השומר"
+}
