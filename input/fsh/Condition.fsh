@@ -59,15 +59,16 @@ Description: "SZMC Condition profile based on IL Core Condition"
 * verificationStatus.coding[unk].system = "http://terminology.hl7.org/CodeSystem/data-absent-reason" (exactly)
 * verificationStatus.coding[unk].code = #not-asked (exactly)
 
-// * category 1..*
-// * category.coding ^slicing.discriminator.type = #value
-// * category.coding ^slicing.discriminator.path = "system"
-// * category.coding ^slicing.rules = #open
-// * category.coding contains
-//     ilcore 0..1 and
-//     szmc 0..1
-// * category.coding[ilcore] from http://fhir.health.gov.il/ValueSet/il-core-condition-category (required)
-// * category.coding[szmc].system = "http://fhir.szmc.org.il/cs/condition-category-local" (exactly)
+* category 1..*
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category contains
+    // ilcore 1..1 and
+    szmc 0..1
+* category[ilcore] from http://fhir.health.gov.il/ValueSet/il-core-condition-category (required)
+* category[szmc] from SZMCConditionEncounterStageVS (required)
+* category[szmc].coding.system = "http://fhir.szmc.org.il/cs/szmc-condition-encounter-stage" (exactly)
 
 * severity.coding ^slicing.discriminator.type = #value
 * severity.coding ^slicing.discriminator.path = "system"

@@ -2,7 +2,7 @@ CodeSystem: SZMCConditionIdentifierSystem
 Id: szmc-condition-identifier-system
 Title: "SZMC Condition Identifier System"
 Description: "CodeSystem for SZMC Condition identifier systems"
-* ^url = "http://fhir.szmc.org.il/CodeSystem/szmc-condition-identifier-system"
+* ^url = "http://fhir.szmc.org.il/cs/szmc-condition-identifier-system"
 * ^status = #draft
 * ^caseSensitive = true
 * ^content = #complete
